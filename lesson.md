@@ -15,7 +15,7 @@ This document is a **short reference** — the lesson itself is taught in the no
 | **Pre-class** | `pre-class.md` + `notebooks/01_monday_morning.ipynb` |
 | **In-class — Part 1: Distributions** | `notebooks/02_distributions.ipynb` |
 | **In-class — Part 2: CLT + Confidence Intervals** | `notebooks/03_confidence_intervals.ipynb` |
-| **In-class — Part 3: A/B Testing + p-values** | `notebooks/04_ab_testing.ipynb` |
+| **In-class — Part 3: Hypothesis Testing (A/B testing as worked example)** | `notebooks/04_ab_testing.ipynb` |
 | **Self-study** | `notebooks/assignment.ipynb` + `notebooks/optional_extensions.ipynb` |
 | **Reference & review** | This document |
 
@@ -25,7 +25,7 @@ The notebooks are the spine. Run them in order. Come back here for the consolida
 
 ## Overview
 
-Sarah's L01 model said "60% positive" — but that was a single number computed from one batch of 10,000 reviews. Priya's question, *how sure are we?*, is the question that probability and statistics exist to answer. By Friday Sarah will hold three new tools: **distributions** (to read the shape of any column of data), **confidence intervals** (to put an honest range around any number she reports), and **A/B testing with p-values** (to decide whether an intervention actually changed anything, or whether the apparent difference is just noise). Every model evaluation, every business experiment, every dashboard number for the rest of the course is read through these three lenses.
+Sarah's L01 model said "60% positive" — but that was a single number computed from one batch of 10,000 reviews. Priya's question, *how sure are we?*, is the question that probability and statistics exist to answer. By Friday Sarah will hold three new tools: **distributions** (to read the shape of any column of data), **confidence intervals** (to put an honest range around any number she reports), and **hypothesis testing with p-values** (to decide whether an intervention actually changed anything, or whether the apparent difference is just noise — with A/B testing as the worked example). Every model evaluation, every business experiment, every dashboard number for the rest of the course is read through these three lenses.
 
 ---
 
@@ -85,7 +85,7 @@ Work through these after finishing the three Part notebooks. Attempt each questi
 
 > **Sample answer:** Probably not. The CI (78–89%) is Sarah's way of saying: with different samples, the accuracy would probably fall somewhere in this range. If Priya ran the test 100 times with different samples of 200 reviews, she'd expect about 95 of those tests to produce a CI that contains the true accuracy — and the point estimates would vary. The 84% is the best estimate from this particular sample; the CI tells her how much to trust it.
 
-### Part 3 — A/B Testing
+### Part 3 — Hypothesis Testing
 
 **Q7 — Design the test.** NorthStar wants to test whether a new "easy returns" banner on the product page reduces returns (by setting better expectations before purchase). Design the A/B test: what are the control and treatment groups? What is the outcome metric? What would make you conclude the banner "works"?
 
@@ -116,12 +116,12 @@ L02 is the lens every later lesson is read through — whenever you report a mod
 |---|---|
 | **L03 — Supervised Learning** | Train/validate split metrics are sample statistics — every accuracy/precision/recall number needs a CI. The threshold-choice exercise is an effect-size question. |
 | **L04 — Supervised Learning (Advanced)** | Hyperparameter tuning compares many model variants; you'll use confidence intervals to decide whether one really beats another or just got a lucky split. |
-| **L05 — Unsupervised Learning** | Anomaly detection is a Z-score generalisation. Cluster quality metrics are sample statistics with CIs. |
+| **L05 — Unsupervised Learning** | Anomaly detection extends the one-sample hypothesis test logic from L02 (Z-score generalisation). Cluster quality metrics are sample statistics with CIs. |
 | **L06 — Time Series** | Forecast intervals are confidence intervals projected forward. Distributional shape determines whether your forecast is honest. |
-| **L07 — Neural Networks** | Validation loss curves are noisy samples; you need CIs to tell whether one architecture genuinely beats another. |
-| **L08 — Computer Vision** | Test-set accuracy on a held-out image set is a sample proportion — same CI math. |
+| **L07 — Neural Networks** | Validation loss curves are noisy samples; you need CIs to tell whether one architecture genuinely beats another. Comparing two models on the same validation set uses a paired t-test — same hypothesis testing framework, different test statistic. |
+| **L08 — Computer Vision** | Test-set accuracy on a held-out image set is a sample proportion — same CI math. Model comparison on the same test set uses a paired test. |
 | **L09 — NLP & Embeddings** | Retrieval evaluation (precision@k, recall@k) is sampled and needs CIs. |
-| **L10 — Transformers & GenAI** | A/B testing of prompts and retrieval strategies is the *only* way to make rigorous claims about an LLM pipeline. |
+| **L10 — Transformers & GenAI** | Hypothesis testing of prompts and retrieval strategies is the *only* way to make rigorous claims about an LLM pipeline. If outcomes are binary (pass/fail per query), use a chi-square test; if using LLM-judge scores on the same prompt set, use a paired t-test. |
 
 ---
 
