@@ -41,7 +41,7 @@
 
 | Phase | Time | Format |
 |---|---|---|
-| Concept walkthrough | ~90 min | Instructor presents core concepts; learners follow along on the [**interactive key-concepts page**](https://flexfengfeng.github.io/dsai-m3-l02-learner/) |
+| Concept walkthrough | ~90 min | Instructor presents core concepts; learners follow along on the [**interactive key-concepts page**](https://su-ntu-ctp.github.io/6m-data-3.2-Probability-Statistics-for-Machine-Learning/) |
 | Hands-on code-alongs | ~90 min | Three notebooks (~20–30 min each) — Core sections only |
 | (Self-study after class) | self-paced | Each notebook has a 🟡 Extension section for going deeper |
 
@@ -55,7 +55,7 @@ This lesson follows a three-phase flow. Work through the phases in order.
 
 ---
 
-### Phase 1 — Before class: self-study (~25 min)
+### Phase 1 — Before class: self-study (~30 min)
 
 **Goal:** Experience the statistical problem first — *feel* why Sarah can't simply report "60% positive" and call it done. Arrive at class with a question.
 
@@ -75,7 +75,7 @@ You will:
 
 **Short reference & review →** [**lesson.md**](./lesson.md) (overview, key takeaways, honest-reporting checklist, 10-question review, L02→L10 course map)
 
-**Interactive walkthrough →** the [**key concepts page**](https://flexfengfeng.github.io/dsai-m3-l02-learner/) (hosted on GitHub Pages) gives an in-browser tour of the core ideas.
+**Interactive walkthrough →** the [**key concepts page**](https://su-ntu-ctp.github.io/6m-data-3.2-Probability-Statistics-for-Machine-Learning/) (hosted on GitHub Pages) gives an in-browser tour of the core ideas.
 
 **Notebooks — run in order:**
 
@@ -125,12 +125,12 @@ Optional material lives in [`notebooks/optional_extensions.ipynb`](./notebooks/o
 ```
 README.md                           ← You are here
 setup.md                            ← One-time environment setup (do this first)
-pre-class.md                        ← Phase 1: 75-min self-study guide
+pre-class.md                        ← Phase 1: 30-min self-study guide
 lesson.md                           ← Short reference: overview, takeaways, honest-reporting checklist, review Q&A, course map
 reference.md                        ← Phase 3: Further reading + glossary (~25 terms)
 environment.yml                     ← Conda environment spec (scipy + statsmodels included)
 docs/
-  index.html                        ← Interactive key-concepts walkthrough (served at https://flexfengfeng.github.io/dsai-m3-l02-learner/ via GitHub Pages)
+  index.html                        ← Interactive key-concepts walkthrough (served at https://su-ntu-ctp.github.io/6m-data-3.2-Probability-Statistics-for-Machine-Learning/ via GitHub Pages)
 notebooks/
   01_monday_morning.ipynb           ← Pre-class hook: Sarah's Monday (~15 min, before class)
   02_distributions.ipynb            ← Part 1: Distributions (Tuesday, in class)
